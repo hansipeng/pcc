@@ -8,11 +8,11 @@ import ftplib
 import time
 
 today = time.strftime('%Y%m%d',time.localtime(time.time()))
-ip = '192.168.120.6'
-username = 'jiangsu3201' 
-password = 'MTnIFTsIw1ti03Lc0325'
-filename = '20000000012008320012BUS10189'+ today + 'D001.tar.gz'
-src_file = '/cteidate/'+filename
+ip = '192.168.100.16'
+username = 'jiangsu' 
+password = 'asdfghj1234567assaddsac'
+filename = '22222211111'+ today + '.tar.gz'
+src_file = '/data/'+filename
 
 class myFtp:
     ftp = ftplib.FTP()
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     ftp = myFtp(ip)
     ftp.Login(username, password)
     ftp.DownLoadFile(filename,src_file )
-#    ftp.DownLoadFileTree('.', '/cteidate/')
+#    ftp.DownLoadFileTree('.', '/data/')
 
     ftp.close()
     print("ok!")
